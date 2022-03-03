@@ -1,5 +1,4 @@
-const slider = document.querySelector('#slider');
-const sliderValue = document.querySelector('#grid-value');
+const gridValue = document.querySelector('#grid-value');
 const btn = document.querySelectorAll('.btn')
 const rainbow = document.getElementById('rainbow');
 const black = document.getElementById('black');
@@ -8,14 +7,13 @@ const grid = document.getElementById('grid');
 
 
 
-window.onload = clearGrid;
+//Event Listeners
 rainbow.addEventListener('click', () => changeColor('rainbow'));
 black.addEventListener('click', () => changeColor('black'));
 clear.addEventListener('click', clearGrid);
 
 
-
-
+//Creates the grid based on the size that the user inputs
 function changeGrid(size) {
     clearGrid;
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`
@@ -30,18 +28,12 @@ function changeGrid(size) {
 
 }
 
-
-
-
-
-
+//Displays the current grid size on the page
 function gridSizeValue(num) {
-    sliderValue.innerText = `${num} x ${num}`;
+    gridValue.innerText = `${num} x ${num}`;
 }
 
-
-
-
+//Clears the grid and prompts for new grid size
 function clearGrid() {
     grid.innerHTML = ''
     let gridSize = prompt("Choose a grid size (MAX: 64)");
@@ -56,14 +48,13 @@ function clearGrid() {
         gridSizeValue(gridSize);
     } else {
         alert("You must enter a number");
-        let gridSize = prompt("Choose a grid size (MAX: 64)");
-    }
-    
+        gridSize = prompt("Choose a grid size (MAX: 64)");
+    }    
 }
 
+//Changes the color of the cells when hovering
 function changeColor(color) {
     if (color === "black") {
-        console.log('Black')
         grid.addEventListener("mouseover", (e) => {
             if (e.target.classList.value === "cell") {
             e.target.style.backgroundColor = "black";
@@ -71,7 +62,6 @@ function changeColor(color) {
             }
          })
         } else if (color = "rainbow") {
-        console.log("Rainbow");
         grid.addEventListener("mouseover", (e) => {
             if (e.target.classList.value === "cell") {
             e.target.style.backgroundColor = `rgb(${Math.floor(Math.random()* 256)}, ${Math.floor(Math.random()* 256)}, ${Math.floor(Math.random()* 256)})`;
@@ -81,3 +71,5 @@ function changeColor(color) {
     }
 }
 
+//Loads fresh grid when the page opens
+window.onload = clearGrid;

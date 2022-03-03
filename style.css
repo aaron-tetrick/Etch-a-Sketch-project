@@ -1,3 +1,4 @@
+/* GENERAL STYLING */
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +11,9 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 100vh;
-
 }
 
+/* HEADER */
 header {
     display: flex;
     justify-content: center;
@@ -27,6 +28,7 @@ header {
     margin-bottom: 30px;
 }
 
+/* GRID STYLING */
 #container {
     display: flex;
     flex-direction: column;
@@ -46,7 +48,7 @@ header {
     height: 500px;
 }
 
-
+/*BUTTON STYLING*/
 #btn-container {
     display: flex;
     justify-content: center;
@@ -62,6 +64,7 @@ header {
 
 }
 
+/* FOOTER */
 footer {
     display: flex;
     justify-content: center;
