@@ -46,9 +46,6 @@ header {
     height: 500px;
 }
 
-.cell {
-    border: solid 1px black;
-}
 
 #btn-container {
     display: flex;
@@ -58,9 +55,10 @@ header {
 }
 
 .btn {
-    width: 5rem;
-    height: 2rem;
-    font-size: 15px ;
+    width: 7rem;
+    height: 3rem;
+    font-size: 20px;
+    margin-top: 2rem;
 
 }
 
