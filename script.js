@@ -81,4 +81,4 @@ function changeColor(color) {
 }
 
 //Loads fresh grid when the page opens
-window.onload = clearGrid;
+window.onloadstart = clearGrid;
