@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Allerta Stencil", sans-serif;
 }
 
 body {
@@ -22,10 +23,9 @@ header {
     background-color: rgb(46, 46, 116);
     font-size: 40px;
     font-weight: bold;
-    text-align: center;
     width: 100%;
     padding: 20px 0px;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
 }
 
 /* GRID STYLING */
@@ -59,20 +59,78 @@ header {
 .btn {
     width: 7rem;
     height: 3rem;
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 2rem;
+    border: solid 2px black;
+    background-color: rgb(190, 190, 190);
+    border-radius: 3px;
 
 }
+
+#clear:hover {
+    background-color: gray;
+    transition: 0.5s;
+}
+
+#black:hover {
+    color: white;
+    background-color: black;
+    transition: 0.5s;
+}
+
+#white:hover {
+    color: black;
+    background-color: white;
+    transition: 0.5s;
+}
+
+#rainbow:hover {
+    animation: rainbow-btn 5s infinite;
+
+}
+
+@keyframes rainbow-btn {
+    0% {
+      background: #fd4538;
+    }
+    25% {
+      background: #eb9515;
+    }
+    50% {
+      background: #e9e623;
+    }
+    75% {
+      background: #34d83c;
+    }
+    100% {
+      background: #333fe7;
+    }
+  }
+
 
 /* FOOTER */
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     background-color: rgb(46, 46, 116);
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     width: 100%;
     padding: 10px 0px;
+    gap: 5px;
+    margin-top: 3rem;
 }
+
+a {
+    text-decoration: none;
+    color: rgb(190, 190, 190);
+    font-size: 20px;
+}
+
+a:hover {
+    color: white;
+}
+

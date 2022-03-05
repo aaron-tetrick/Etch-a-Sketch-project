@@ -4,12 +4,14 @@ const rainbow = document.getElementById('rainbow');
 const black = document.getElementById('black');
 const clear = document.getElementById('clear');
 const grid = document.getElementById('grid');
+const white = document.getElementById('white');
 
 
 
 //Event Listeners
 rainbow.addEventListener('click', () => changeColor('rainbow'));
 black.addEventListener('click', () => changeColor('black'));
+white.addEventListener('click', () => changeColor('white'));
 clear.addEventListener('click', clearGrid);
 
 
@@ -61,10 +63,17 @@ function changeColor(color) {
             e.target.style.transition = '0.5s';
             }
          })
-        } else if (color = "rainbow") {
+        } else if (color === "rainbow") {
         grid.addEventListener("mouseover", (e) => {
             if (e.target.classList.value === "cell") {
             e.target.style.backgroundColor = `rgb(${Math.floor(Math.random()* 256)}, ${Math.floor(Math.random()* 256)}, ${Math.floor(Math.random()* 256)})`;
+            e.target.style.transition = '0.5s';
+        }
+         })
+    } else if (color === "white") {
+        grid.addEventListener("mouseover", (e) => {
+            if (e.target.classList.value === "cell") {
+            e.target.style.backgroundColor = 'white';
             e.target.style.transition = '0.5s';
         }
          })
